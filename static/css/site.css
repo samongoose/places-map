@@ -1,0 +1,152 @@
+body, html, div
+{
+   margin:0;
+   padding:0;
+}
+
+
+body
+{
+   width:100%
+}
+#Search
+{
+   float:left;
+   width:20%;
+}
+
+#Playlist
+{
+   width:425px;
+   float:right;
+}
+
+.video
+{
+   width:98%;
+   background:cornsilk;
+   margin:5px 0px;
+   cursor:default;
+}
+
+.video:hover
+{
+   outline:ridge;
+   outline-color:red;
+}
+
+.video .Thumbnail
+{
+   float:left;
+}
+
+.DeleteItem
+{
+   float:right;
+   height:20px;
+   width:20px;
+}
+
+.ActionItem
+{
+   background-size:20px 20px;
+   background-repeat:no-repeat;
+   background-position:center;
+   float:right;
+   height:20px;
+   width:20px;
+   padding:1px;
+   border-radius:15px;
+}
+
+#Playlist .ActionItem
+{
+   background-image:url('/static/images/delete32x32.png');
+}
+
+#Playlist .ActionItem:hover
+{
+   background-color:orange;
+}
+
+
+#PlacesList
+{
+   overflow:hidden;
+}
+
+#SearchTerm
+{
+   margin:5px;
+}
+.clear
+{
+   clear:both;
+}
+
+#map-canvas
+{
+   float:right;
+   width:75%;
+   margin: 0px 5px;
+}
+
+#Player
+{
+   margin-left:auto;
+   margin-right:auto;
+   padding:5px;
+   float:left;
+   overflow:auto;
+   width:350px;
+}
+#Player h2
+{
+   text-align:left;
+   width:100%;
+   white-space:pre-wrap;
+}
+
+#CreatePlaylist
+{
+   cursor:pointer;
+}
+
+.Selected
+{
+    background:aqua;
+}
+
+.place img
+{
+   width:12px;
+   height:12px;
+   margin: 5px 0px 0px 0px;
+   border-radius:12px;
+   cursor:default;
+   float:right;
+   visibility:hidden;
+}
+
+.place:hover img
+{
+    visibility:visible;
+}
+
+.place span
+{
+    padding: 0px 5px;
+    margin:2px;
+    border:none;
+    position:relative;
+    cursor:default;
+}
+.place span:hover
+{
+    outline:ridge;
+}
+
+.place img:hover
+{
+    background:orange;
+}

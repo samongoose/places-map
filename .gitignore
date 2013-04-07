@@ -1,5 +1,8 @@
 *.py[cod]
 
+#vi debris
+*.swp
+
 # C extensions
 *.so
 

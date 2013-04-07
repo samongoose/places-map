@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% import json %}
+
+<script type="text/javascript">
+    {% if map is not None %}
+        {% set curr_map = json.loads(map_obj); %}
+        savedPlaces = {};
+        {% for place in curr_map['places'] %}
+            savedPlaces[{{place['id']}}] = {% raw json.dumps(place) %};
+        {% end %}
+    {% end %}
+    $(function() {
+        initMapView();
+    });
+</script>
+
+<script type="text/html" id="place_template">
+    <div class="place" id=<%=docId%>>
+      <span class="name"><%=name%></span>
+      <img class="DeletePlace" src="{{static_url('images/delete32x32.png')}}" />
+   </div>
+</script>
+
+{% end block %}
+
+{% block body %}
+<div id="Search">
+   <span>Search: </span>
+   <input type="text" id="SearchTerm" />
+   <div id="PlacesList"> 
+   </div>
+</div>
+<div id="map-canvas" style="height:500px"/>
+
+
+
+{% end %}
