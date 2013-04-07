@@ -157,7 +157,6 @@ class Index(RequestHandler):
 _settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
     "template_path": os.path.join(os.path.dirname(__file__), "templates"),
-    "debug": "True",
 }
 
 _application = tornado.web.Application([
@@ -172,7 +171,7 @@ def set_ping(io_loop, timeout):
     io_loop.add_timeout(timeout, lambda: set_ping(io_loop, timeout))
 
 if __name__ == "__main__":
-    _application.listen(8888)
+    _application.listen(os.environ.get("PORT", 8888))
 
     _ioloop = tornado.ioloop.IOLoop.instance()
     set_ping(_ioloop, timedelta(seconds=2))
