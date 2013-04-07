@@ -1,5 +1,4 @@
 var Map = (function() {
-
     var my = {};
 
     var geocoder;
@@ -9,9 +8,6 @@ var Map = (function() {
     var savedPlaces;
     var placeImage;
     var placeShadow;
-
-    $(function () {
-    });
 
     my.initialize = function (mapObj) {
         geocoder = new google.maps.Geocoder();
